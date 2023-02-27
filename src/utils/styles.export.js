@@ -19,8 +19,8 @@ function exportStyle(data) {
       const style = getRawCss(item.form.submitButton.style);
       styles.appendChild(document.createTextNode(`.${selector}{${style}}`));
 
-      item.form.fields.items.forEach((i) => {
-        selector = getClass(i);
+      item.form.fields.items.forEach((field) => {
+        selector = getClass(field);
         const style = getRawCss(item.form.fields.style);
         styles.appendChild(document.createTextNode(`.${selector}{${style}}`));
       });
